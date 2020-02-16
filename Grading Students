@@ -53,3 +53,10 @@ for i in range(n):
      while grade%5!=0:
          grade=grade+1
   print(grade)
+EFFICIENT SOLUTION:
+n=int(input().strip())
+for i in range(n):
+  grade=int(input().strip())
+  if grade>=38 and grade%5>=3:
+     grade=grade+(5-(grade%5))
+  print(grade)
