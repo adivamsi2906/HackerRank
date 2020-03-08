@@ -51,6 +51,29 @@ OUTPUT:
 
 Efficient solution:
 
+
+l=[5,3,20,15,8,3]
+a=len(l)
+s=[]
+  
+for i in range(a-1,0,-1):
+    if(i==a-1):
+        max=l[i]
+        s.append(max)
+    else:
+        if(l[i]>max):
+            s.append(l[i])
+s.reverse()
+for i in s:
+    print(i,end=' ')
+ output:
+20
+15
+8
+3
+
+   
+SOLUTION2:
 l=[5,3,20,15,8,3]
 a=len(l)
 s=[]
