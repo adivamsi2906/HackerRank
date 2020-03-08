@@ -1,0 +1,35 @@
+Sliding window Technique
+Problem:
+input:
+1.an array of integers
+[1,8,30,-5,20,7]
+2.variable k an integer to consider k elements
+k=3
+output:
+the maximum sum of the consecutive k elements in an array
+45
+explination:
+1+8+30=39
+8+30+(-5)=33
+30+(-5)+20=45
+-5+20+7=22
+
+sum =45 is highest among all the k consecutive subsets
+
+
+Solution:
+l=[1,8,30,-5,20,7]
+k=int(input())
+a=len(l)-1
+summ=0
+for i in range(k):
+    summ+=l[i] #sum of first k elements
+maxsum=summ
+for i in range(k,a):
+    summ=summ+(l[i]-l[i-k]) #adding i th element to sum and subtracting i-k element from sum
+    maxsum=max(maxsum,summ) #selecting maximum sum and printing
+print(maxsum)
+
+
+OUTPUT:
+45
